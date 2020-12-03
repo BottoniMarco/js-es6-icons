@@ -97,13 +97,15 @@ const icons = [
   },
 ];
 
+const container = $("#icons");
 
 icons.forEach((element) => {
   // console.log( element.family, element.prefix , element.name);
   console.log(
     container.append(`
-      <div>
+      <div class=" box ">
         <i class="${element.family} ${element.prefix}${element.name}"> </i>
+        <p>${element.name}</p>
       </div>
     `)
   );
