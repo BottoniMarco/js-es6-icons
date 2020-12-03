@@ -99,14 +99,63 @@ const icons = [
 
 const container = $("#icons");
 
-icons.forEach((element) => {
-  // console.log( element.family, element.prefix , element.name);
-  console.log(
+icons.forEach((element,index) => {
+  console.log(element.type);
+  if (element.type == "vehicle") {
     container.append(`
-      <div class=" box ">
+      <div class=" box "  style = "color : pink" >
         <i class="${element.family} ${element.prefix}${element.name}"> </i>
         <p>${element.name}</p>
       </div>
     `)
-  );
+  }else if (element.type == "vegetable"){
+    container.append(`
+      <div class=" box "  style = "color : green" >
+        <i class="${element.family} ${element.prefix}${element.name}"> </i>
+        <p>${element.name}</p>
+      </div>
+    `)
+  }else if (element.type == "animal"){
+    container.append(`
+      <div class=" box "  style = "color : blue" >
+        <i class="${element.family} ${element.prefix}${element.name}"> </i>
+        <p>${element.name}</p>
+      </div>
+    `)
+  }
 });
+
+
+
+
+// milestone-2
+/*
+const color = ["red","blue","green"];
+
+const type = ["vehicle","vegetable","animal"];
+
+icons.forEach((element,index) => {
+  console.log(element.type);
+  if (element.type == "vehicle") {
+    container.append(`
+      <div class=" box "  style = "color : pink" >
+        <i class="${element.family} ${element.prefix}${element.name}"> </i>
+        <p>${element.name}</p>
+      </div>
+    `)
+  }else {
+    console.log("non-v");
+  }
+});
+*/
+
+
+// milestone-1
+/*
+container.append(`
+  <div class=" box ">
+    <i class="${element.family} ${element.prefix}${element.name}"> </i>
+    <p>${element.name}</p>
+  </div>
+`)
+*/
